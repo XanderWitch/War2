@@ -1,0 +1,15 @@
+{
+  "name": "week6warcardgameproject",
+  "version": "1.0.0",
+  "description": "week 6 js war card game",
+  "main": "app.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "Janell Robisch",
+  "license": "ISC",
+  "dev-dependencies": {
+    "chai": "^4.3.4",
+    "mocha": "^9.1.3"
+  }
+}
