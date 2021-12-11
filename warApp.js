@@ -35,10 +35,11 @@ class Deck {
                 this.cardsInDeck.push(new Card(suits[i], ranks[j], values[j]));
             }
         }
+    
     }
 
     //shuffle the deck -- loop through the entire deck, swapping each card with another at a random position in the deck
-    shuffleDeck() { /* keeping suits together??? */
+    shuffleDeck() { 
         
         for (var i = 0; i < this.cardsInDeck.length; i++) {
 
@@ -60,7 +61,7 @@ class Deck {
 class Player {
     constructor(name) {
         this.playersName = name;
-        this.playersCards = []
+        this.playersCards = [];
     }
 }
 
@@ -83,7 +84,7 @@ class Table {
         this.players[1].playersCards = deck.cardsInDeck.slice(26, 52);
         
         //set initial scores to 0
-        this.players[0].playersScore = 0;
+        this.players[0].playersScore = 0; //could be in player class constructor
         this.players[1].playersScore = 0;
 
         //loop through each index in the players cards, comparing them
@@ -115,12 +116,6 @@ class Table {
 
 let warTable = new Table();
 
-const playerOne = prompt("Player 1, enter your name.");
-const playerTwo = prompt("Player 2, enter your name.")
-warTable.start(playerOne, playerTwo);/*ENTER PROMPTS FOR PLAYER NAMES AND MAYBE CHANGE CONSOLE LOGS TO ALERTS */
-
-
-
-
-
-
+// const playerOne = prompt("Player 1, enter your name.");
+// const playerTwo = prompt("Player 2, enter your name.")
+warTable.start('WarMonger', 'WarMaster');
